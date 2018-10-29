@@ -54,16 +54,16 @@ class crates extends PluginBase implements Listener {
           $kingKeys = $crateArray[$sender->getName()]["Sky Keys"];
           $lordKeys = $crateArray[$sender->getName()]["Sky Keys"];
           
-          $skyLore = Array(TextFormat::BLUE . $sender->getName . ": " . TextFormat::WHITE . $skyKeys . TextFormat::BLUE . " Sky Keys");
+          $skyLore = Array(TextFormat::BLUE . $sender->getName() . ": " . TextFormat::WHITE . $skyKeys . TextFormat::BLUE . " Sky Keys");
           $skyCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::BLUE . "The Sky Crate")->setLore($skyLore);
           
-          $voidLore = Array(TextFormat::DARK_BLUE . $sender->getName . ": " . TextFormat::WHITE . $voidKeys . TextFormat::DARK_BLUE . " Void Keys");
+          $voidLore = Array(TextFormat::DARK_BLUE . $sender->getName() . ": " . TextFormat::WHITE . $voidKeys . TextFormat::DARK_BLUE . " Void Keys");
           $voidCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::DARK_BLUE . "The Void Crate")->setLore($voidLore);
           
-          $kingLore = Array(TextFormat::RED . $sender->getName . ": " . TextFormat::WHITE . $kingKeys . TextFormat::RED . " King Keys");
+          $kingLore = Array(TextFormat::RED . $sender->getName() . ": " . TextFormat::WHITE . $kingKeys . TextFormat::RED . " King Keys");
           $kingCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::RED . "The King Crate")->setLore($kingLore);
           
-          $lordLore = Array(TextFormat::GOLD . $sender->getName . ": " . TextFormat::WHITE . $lordKeys . TextFormat::GOLD . " Lord Keys");
+          $lordLore = Array(TextFormat::GOLD . $sender->getName() . ": " . TextFormat::WHITE . $lordKeys . TextFormat::GOLD . " Lord Keys");
           $lordCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::GOLD . "The Lord Crate")->setLore($lordLore);
           
           $menu = InvMenu::create(InvMenu::TYPE_CHEST);
