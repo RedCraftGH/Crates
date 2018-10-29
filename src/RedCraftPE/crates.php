@@ -14,6 +14,8 @@ use pocketmine\utils\Config;
 use pocketmine\math\Vector3;
 use pocketmine\level\particle\FloatingTextParticle;
 use pocketmine\item\Item;
+use pocketmine\Player;
+use pocketmine\inventory\transaction\action\SlotChangeAction;
 use RedCraftPE\Skyblock;
 use muqsit\invmenu\{InvMenu, InvMenuHandler};
 
