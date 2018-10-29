@@ -67,7 +67,7 @@ class crates extends PluginBase implements Listener {
           $lordCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::GOLD . "The Lord Crate")->setLore($lordLore);
           
           $menu = InvMenu::create(InvMenu::TYPE_CHEST);
-          $menu->setName(TextFormat::GOLD . "Cube" . TextFormat::BLUE . "X" . TextFormat::GREEN . " SkyBlock " . TextFormat::GOLD . "Crates");
+          $menu->setName(TextFormat::YELLOW . "Cube" . TextFormat::BLUE . "X" . TextFormat::GREEN . " SkyBlock " . TextFormat::YELLOW . "Crates");
           $menu->readonly();
           $menu->getInventory()->setItem(2, $skyCrate);
           $menu->getInventory()->setItem(4, $voidCrate);
