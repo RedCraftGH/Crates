@@ -204,7 +204,6 @@ class crates extends PluginBase implements Listener {
     if ($itemClickedOn->getName() === TextFormat::BLUE . "The Sky Crate") {
       
       $this->menu->getInventory()->setItem(1, Item::get(223,0,1));
-      $this->menu->getInventory()->setItem(2, Item::get(223,0,1));
       $this->menu->getInventory()->setItem(3, Item::get(223,0,1));
       $this->menu->getInventory()->setItem(10, Item::get(223,0,1));
       $this->menu->getInventory()->setItem(11, Item::get(223,0,1));
