@@ -1,0 +1,9 @@
+name: SkyblockCrates
+author: CubeXDevelopers
+version: 1.0.0-CubeXBeta
+api: 3.0.0, 4.0.0
+main: RedCraftPE\crates
+commands:
+  crates:
+    usage: /crate <buy/open> <crate>
+    description: Open and buy crates with your hard earned tokens!
