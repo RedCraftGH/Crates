@@ -34,6 +34,10 @@ class crates extends PluginBase implements Listener {
     }
     $this->crates->save();
     $this->crates->reload();
+    
+    if(!InvMenuHandler::isRegistered()){
+      InvMenuHandler::register($plugin);
+    }
   }
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
 
@@ -43,12 +47,31 @@ class crates extends PluginBase implements Listener {
         if (!$args) {
 
           //Crate GUI below here:
+          
+          $crateArray = $this->crates->get("Crates");
+          $skyKeys = $crateArray[$sender->getName()]["Sky Keys"];
+          $voidKeys = $crateArray[$sender->getName()]["Sky Keys"];
+          $kingKeys = $crateArray[$sender->getName()]["Sky Keys"];
+          $lordKeys = $crateArray[$sender->getName()]["Sky Keys"];
+          
+          $skyLore = Array(TextFormat::BLUE . $sender->getName . ": " . TextFormat::WHITE . $skyKeys . TextFormat::BLUE . " Sky Keys");
+          $skyCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::BLUE . "The Sky Crate")->setLore($skyLore);
+          
+          $voidLore = Array(TextFormat::DARK_BLUE . $sender->getName . ": " . TextFormat::WHITE . $voidKeys . TextFormat::DARK_BLUE . " Void Keys");
+          $voidCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::DARK_BLUE . "The Void Crate")->setLore($voidLore);
+          
+          $kingLore = Array(TextFormat::RED . $sender->getName . ": " . TextFormat::WHITE . $kingKeys . TextFormat::RED . " King Keys");
+          $kingCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::RED . "The King Crate")->setLore($kingLore);
+          
+          $lordLore = Array(TextFormat::GOLD . $sender->getName . ": " . TextFormat::WHITE . $lordKeys . TextFormat::GOLD . " Lord Keys");
+          $lordCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::GOLD . "The Lord Crate")->setLore($lordLore);
+          
           $menu = InvMenu::create(InvMenu::TYPE_CHEST);
           $menu->readonly();
-          $menu->getInventory()->setItem(2, Item::get(Item::CHEST));
-          $menu->getInventory()->setItem(4, Item::get(Item::CHEST));
-          $menu->getInventory()->setItem(6, Item::get(Item::CHEST));
-          $menu->getInventory()->setItem(22, Item::get(Item::CHEST));
+          $menu->getInventory()->setItem(2, $skyCrate);
+          $menu->getInventory()->setItem(4, $voidCrate);
+          $menu->getInventory()->setItem(6, $kingCrate);
+          $menu->getInventory()->setItem(22, $lordCrate);
           $menu->send($sender);
           return true;
         } elseif ($args[0] === "buy") {
