@@ -43,7 +43,7 @@ class crates extends PluginBase implements Listener {
         if (!$args) {
 
           //Crate GUI below here:
-          $menu = InvMenu::create(InvMenu::TYPE_DOUBLE_CHEST);
+          $menu = InvMenu::create(InvMenu::TYPE_CHEST);
           $menu->readonly();
           $menu->getInventory()->setItem(3, Item::get(Item::CHEST));
           $menu->getInventory()->setItem(5, Item::get(Item::CHEST));
