@@ -50,9 +50,9 @@ class crates extends PluginBase implements Listener {
           
           $crateArray = $this->crates->get("Crates");
           $skyKeys = $crateArray[$sender->getName()]["Sky Keys"];
-          $voidKeys = $crateArray[$sender->getName()]["Sky Keys"];
-          $kingKeys = $crateArray[$sender->getName()]["Sky Keys"];
-          $lordKeys = $crateArray[$sender->getName()]["Sky Keys"];
+          $voidKeys = $crateArray[$sender->getName()]["Void Keys"];
+          $kingKeys = $crateArray[$sender->getName()]["King Keys"];
+          $lordKeys = $crateArray[$sender->getName()]["Lord Keys"];
           
           $skyLore = Array(TextFormat::BLUE . $sender->getName() . ": " . TextFormat::WHITE . $skyKeys . TextFormat::BLUE . " Sky Keys");
           $skyCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::BLUE . "The Sky Crate")->setLore($skyLore);
