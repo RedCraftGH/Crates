@@ -69,6 +69,7 @@ class crates extends PluginBase implements Listener {
           $menu = InvMenu::create(InvMenu::TYPE_CHEST);
           $menu->setName(TextFormat::YELLOW . "Cube" . TextFormat::BLUE . "X" . TextFormat::GREEN . " SkyBlock " . TextFormat::YELLOW . "Crates");
           $menu->readonly();
+          $menu->setListener([$this, "onTransaction"]);
           $menu->getInventory()->setItem(2, $skyCrate);
           $menu->getInventory()->setItem(4, $voidCrate);
           $menu->getInventory()->setItem(6, $kingCrate);
@@ -193,6 +194,15 @@ class crates extends PluginBase implements Listener {
       $cratesArray[$player->getName()] = Array("Sky Keys" => 0, "Void Keys" => 0, "King Keys" => 0, "Lord Keys" => 0);
       $this->crates->set("Crates", $cratesArray);
       $this->crates->save();
+      return;
+    }
+  }
+  public function onTransaction(Player $sender, Item $itemClickedOn, Item $itemClickedWith, SlotChangeAction $inventoryAction): bool {
+  
+    if ($itemClickedOn->getName() === TextFormat::BLUE . "The Sky Crate") {
+      
+      $sender->removeWindow($inventoryAction->getInventory());
+      $sender->sendMessage(TextFormat::GREEN . "Bam, it worked!");
       return;
     }
   }
