@@ -203,7 +203,8 @@ class crates extends PluginBase implements Listener {
       
       $sender->removeWindow($inventoryAction->getInventory());
       $sender->sendMessage(TextFormat::GREEN . "Bam, it worked!");
-      return;
+      return true;
     }
+    return false;
   }
 }
