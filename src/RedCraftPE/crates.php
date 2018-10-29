@@ -36,7 +36,7 @@ class crates extends PluginBase implements Listener {
     $this->crates->reload();
     
     if(!InvMenuHandler::isRegistered()){
-      InvMenuHandler::register($plugin);
+      InvMenuHandler::register($this);
     }
   }
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
