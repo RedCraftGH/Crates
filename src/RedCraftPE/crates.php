@@ -40,6 +40,7 @@ class crates extends PluginBase implements Listener {
     if(!InvMenuHandler::isRegistered()){
       InvMenuHandler::register($this);
     }
+    $this->menu = InvMenu::create(InvMenu::TYPE_CHEST);
   }
   public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
 
@@ -68,15 +69,14 @@ class crates extends PluginBase implements Listener {
           $lordLore = Array(TextFormat::GOLD . $sender->getName() . ": " . TextFormat::WHITE . $lordKeys . TextFormat::GOLD . " Lord Keys");
           $lordCrate = Item::get(Item::CHEST)->setCustomName(TextFormat::GOLD . "The Lord Crate")->setLore($lordLore);
           
-          $menu = InvMenu::create(InvMenu::TYPE_CHEST);
-          $menu->setName(TextFormat::YELLOW . "Cube" . TextFormat::BLUE . "X" . TextFormat::GREEN . " SkyBlock " . TextFormat::YELLOW . "Crates");
-          $menu->readonly();
-          $menu->setListener([$this, "onTransaction"]);
-          $menu->getInventory()->setItem(2, $skyCrate);
-          $menu->getInventory()->setItem(4, $voidCrate);
-          $menu->getInventory()->setItem(6, $kingCrate);
-          $menu->getInventory()->setItem(22, $lordCrate);
-          $menu->send($sender);
+          $this->menu->setName(TextFormat::YELLOW . "Cube" . TextFormat::BLUE . "X" . TextFormat::GREEN . " SkyBlock " . TextFormat::YELLOW . "Crates");
+          $this->menu->readonly();
+          $this->menu->setListener([$this, "onTransaction"]);
+          $this->menu->getInventory()->setItem(2, $skyCrate);
+          $this->menu->getInventory()->setItem(4, $voidCrate);
+          $this->menu->getInventory()->setItem(6, $kingCrate);
+          $this->menu->getInventory()->setItem(22, $lordCrate);
+          $this->menu->send($sender);
           return true;
         } elseif ($args[0] === "buy") {
 
@@ -203,6 +203,38 @@ class crates extends PluginBase implements Listener {
   
     if ($itemClickedOn->getName() === TextFormat::BLUE . "The Sky Crate") {
       
+      $this->menu->getInventory()->setItem(1, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(2, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(3, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(10, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(11, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(12, Item::get(223,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(0, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(9, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(18, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(19, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(20, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(21, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(22, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(4, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(13, Item::get(223,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(5, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(14, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(23, Item::get(223,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(6, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(15, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(24, Item::get(223,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(7, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(16, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(25, Item::get(223,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(8, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(17, Item::get(223,0,1));
+      $this->menu->getInventory()->setItem(26, Item::get(223,0,1));
       $sender->removeWindow($inventoryAction->getInventory());
       $sender->sendMessage(TextFormat::GREEN . "Bam, it worked!");
       return true;
