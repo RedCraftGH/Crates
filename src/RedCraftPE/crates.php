@@ -238,6 +238,113 @@ class crates extends PluginBase implements Listener {
       $this->menu->getInventory()->clearAll();
       return true;
     }
+    if ($itemClickedOn->getName() === TextFormat::DARK_BLUE . "The Void Crate") {
+      
+      $this->menu->getInventory()->setItem(3, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(5, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(12, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(13, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(14, Item::get(231,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(2, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(6, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(11, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(15, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(20, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(21, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(22, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(23, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(24, Item::get(231,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(1, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(10, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(19, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(7, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(16, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(25, Item::get(231,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(0, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(9, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(18, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(8, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(17, Item::get(231,0,1));
+      $this->menu->getInventory()->setItem(26, Item::get(231,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->clearAll();
+      return true;
+    }
+    if ($itemClickedOn->getName() === TextFormat::RED . "The King Crate") {
+      
+      $this->menu->getInventory()->setItem(5, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(7, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(14, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(15, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(16, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(4, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(13, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(22, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(23, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(24, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(25, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(26, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(8, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(17, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(3, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(12, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(21, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(2, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(11, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(20, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(1, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(10, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(19, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(0, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(9, Item::get(234,0,1));
+      $this->menu->getInventory()->setItem(18, Item::get(234,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->clearAll();
+      return true;
+    }
+    if ($itemClickedOn->getName() === TextFormat::GOLD . "The Lord Crate") {
+      
+      $this->menu->getInventory()->setItem(21, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(23, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(12, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(13, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(14, Item::get(224,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(2, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(11, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(20, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(3, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(4, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(5, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(6, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(15, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(24, Item::get(224,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(1, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(10, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(19, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(7, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(16, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(25, Item::get(224,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->setItem(0, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(9, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(18, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(8, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(17, Item::get(224,0,1));
+      $this->menu->getInventory()->setItem(26, Item::get(224,0,1));
+      usleep(200000);
+      $this->menu->getInventory()->clearAll();
+      return true;
+    }
     return false;
   }
 }
